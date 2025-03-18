@@ -21,7 +21,7 @@ logging.basicConfig(
 # -------------------------------
 # Global Configuration
 # -------------------------------
-SYMBOL = "BTCUSD"               # Adjust as needed (e.g., "BTCUSD.pro" if required by broker)
+SYMBOL = "XAUUSD.sml"               # Adjust as needed (e.g., "BTCUSD.pro" if required by broker)
 TICK_BUFFER_SIZE = 30           # Rolling buffer size for statistics
 TICKS_PER_CALL = 200            # Maximum ticks to fetch per call
 LOOKBACK_MINUTES = 2            # Start time: 2 minutes in the past
@@ -157,7 +157,7 @@ def place_market_order(symbol, volume, order_type, price, variance):
         "tp": tp,
         "deviation": 20,
         "type_time": mt5.ORDER_TIME_GTC,
-        "type_filling": mt5.ORDER_FILLING_IOC,
+        "type_filling": mt5.ORDER_FILLING_FOK,
         "comment": comment
     }
 
